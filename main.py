@@ -24,11 +24,10 @@ def main():
         sleep(1)
         featured_image = browser.find_by_xpath('//*[@id="page"]/section[1]/div/article/figure/a')['href']
 
-    wallpaper = urllib.request.urlretrieve(featured_image, "image/nasaImage.png")[0]
+    wallpaper = urllib.request.urlretrieve(featured_image, f"{os.path.dirname(__file__)}/image/nasaImage.png")[0]
     SPI_SETDESKWALLPAPER = 0x14     #which command (20)
-
     SPIF_UPDATEINIFILE   = 0x2 #forces instant update
-    src = r"{}/{}".format(os.path.dirname(__file__),wallpaper) #full file location
+    src = r"{}".format(wallpaper) #full file location
     #in python 3.4 you have to add 'r' before "path\img.jpg"
 
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, src, SPIF_UPDATEINIFILE)
