@@ -6,8 +6,8 @@ import os
 
 
 def main():
-    """ Scrape Nasa's website for the image of the day and set it as the desktop image """
-    
+    """ Scrape Nasa's website for the featured image of the day and set it as the desktop image """
+
     ### IMPORTANT!! The value for the key 'executable_path' should be the path to your chromedriver.exe
     executable_path = {'executable_path':'C:/path/to/chromedriver.exe'}
     with Browser('chrome', **executable_path) as browser:
