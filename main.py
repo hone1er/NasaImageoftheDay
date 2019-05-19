@@ -8,8 +8,7 @@ import os
 def main():
     """ Scrape Nasa's website for the featured image of the day and set it as the desktop image """
 
-    ### IMPORTANT!! The value for the key 'executable_path' should be the path to your chromedriver.exe
-    executable_path = {'executable_path':'C:/path/to/chromedriver.exe'}
+    executable_path = {'executable_path':f'{os.path.dirname(__file__)}/chromedriver.exe'}
     with Browser('chrome', **executable_path) as browser:
         # Visit URL
         url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
