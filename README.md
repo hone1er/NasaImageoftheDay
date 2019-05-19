@@ -1,2 +1,2 @@
-# NasaImageoftheDay
-Sets desktop background to Nasa image of the day
+# Nasa Featured Image
+Sets desktop background to Nasa featured image
